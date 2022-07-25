@@ -70,15 +70,17 @@ function likeBlog (idBlog) {
     });
 }
 
-function toUpdatePage(idBlog) {
-    console.log(idBlog); 
-    sessionStorage.setItem("id", idBlog); 
+function toUpdatePage(id, title, content) {
+    sessionStorage.setItem("id", id); 
+    sessionStorage.setItem("title", title); 
+    sessionStorage.setItem("content", content); 
     window.location.href = "update-blog.html"; 
 }
 
 function updateBlog(event) {
     event.preventDefault();
     const id = sessionStorage.getItem("id"); 
+        
     console.log("Update Blog " + id); 
 
     const title = document.getElementById('blog-title').value; 
@@ -164,18 +166,18 @@ function listAllBlogEditor() {
             title.className = "title"; 
             title.innerHTML = allBlog[i].title; 
             
-            const editIcon = document.createElement('i');
-            editIcon.className = "ti-pencil edit-icon"; 
-            editIcon.setAttribute('onclick','toUpdatePage("' + id + '")');
-
             const content = document.createElement('p');                             
             content.innerHTML = allBlog[i].content; 
+
+            const editIcon = document.createElement('i');
+            editIcon.className = "ti-pencil edit-icon"; 
+            editIcon.setAttribute('onclick','toUpdatePage("' + id + '","' + allBlog[i].title + '","' + allBlog[i].content + '")');
             
             //<a><i class="ti-heart text-danger"></i> <span id="like-count">0</span></a>
             const details = document.createElement('p');                               
             details.className = "post-details";                             
             const heartIcon = document.createElement('i');
-            heartIcon.className = "ti-heart";             
+            heartIcon.className = "ti-heart like-icon";             
             heartIcon.setAttribute('onclick','likeBlog("' + id + '")');             
 
             const like = document.createElement('span'); 
@@ -241,7 +243,7 @@ function listAllBlog() {
             const details = document.createElement('p');                               
             details.className = "post-details";                             
             const heartIcon = document.createElement('i');
-            heartIcon.className = "ti-heart";                             
+            heartIcon.className = "ti-heart";               like-icon               
             heartIcon.setAttribute('onclick','likeBlog("' + id + '")');             
 
             const like = document.createElement('span'); 
