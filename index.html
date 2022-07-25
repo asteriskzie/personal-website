@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Ester's Personal Website</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- Biar bisa pake Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onLoad="listAllBlog()">
+    <a onclick="checkPin()" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600" style="color:white"><i class="ti-shift-left-alt"></i> Edit Blog</a>
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">                
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://github.com/asteriskzie"><span class="iconify" data-icon="entypo-social:github"></span></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://www.linkedin.com/in/ester-gracia-a93a94207/"><span class="iconify" aria-hidden="true" data-icon="simple-icons:codeforces"></span></a></li>
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://www.linkedin.com/in/ester-gracia-a93a94207/"><span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span></a></li>                
+                <li class="social-item"><a target="_blank" class="social-link text-light" href="https://www.instagram.com/estergraciaa10/"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a></li>
+            </ul>  
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h1 class="header-title">Ester Gracia</h1>
+                <h6 class="header-mono" >Student | (Competitive) Programmer</h6>
+                <!-- <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>My CV</button> -->
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/imgs/avatar.jfif" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Ester Gracia</h5>
+                        <div class="brand-subtitle">Student | (Competitive) Programmer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">About Me</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">Student at University of Indonesia</h5>
+                <p class="mt-20">Saya menekuni pemrograman kompetitif sejak SMA, 
+                    ingin memelajari pemrograman yang digunakan dalam industri 
+                    agar bisa berkarya dan berkarir dalam bidang teknologi.</p>
+                <!-- <button onclick="window.open('assets/cv.pdf')" target='_blank' class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button> -->
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birthdate</span> : 10/07/2004</li>
+                    <li><span>Email</span> : ester.gracia.10@gmail.com</li>
+                    <li><span>Phone</span> : + (62) 895-1034-1045</li>                    
+                </ul>
+                <ul class="social-icons pt-3">
+                    <!-- <li class="social-item"><a target="_blank" class="social-link" href="https://www.facebook.com/ester.gracia.12/"><i class="ti-facebook" aria-hidden="true"></i></a></li> -->
+                    <!-- <li class="social-item"><a target="_blank" class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li> -->
+                    <li class="social-item"><a target="_blank" class="social-link" href="https://github.com/asteriskzie"><span class="iconify" data-icon="entypo-social:github"></span></a></li>
+                    <li class="social-item"><a target="_blank" class="social-link" href="https://www.linkedin.com/in/ester-gracia-a93a94207/"><span class="iconify" aria-hidden="true" data-icon="simple-icons:codeforces"></span></a></li>
+                    <li class="social-item"><a target="_blank" class="social-link" href="https://www.linkedin.com/in/ester-gracia-a93a94207/"><span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span></a></li>
+                    <li class="social-item"><a target="_blank" class="social-link" href="https://www.instagram.com/estergraciaa10/"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a></li>
+                </ul>  
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Achievement</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-cup icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Runner Up</h6>
+                        <p class="subtitle"> KKC 2022 - Algobash</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-crown icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Silver Medalist</h6>
+                        <p class="subtitle">KSN 2021 - Puspresnas</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-star icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Finalist</h6>
+                        <p class="subtitle">BNPC HS 2021 - Binus University</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Resume Section, ganti jadi Experience-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Experience</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Work 💼</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Kokocoder Weekend Class</h6>
+                            <P>June 2022 - present</P>
+                            <P class="subtitle">Online class held every weekend by Kokocoder. I teach students from junior and senior high school basic and competitive programming in C++. The materials are based on National Olympiad in Informatics syllabus.</P>                                                        
+                            <hr>
+                            <h6 class="title text-danger">Kokocoder Winter Class</h6>
+                            <P>January 2022</P>
+                            <P class="subtitle">A class by Kokocoder during school end-of-year holiday, where I taught mathematics and basic data structures for competitive programming.</P>
+                            <hr>    
+                            <h6 class="title text-danger">Mandiri KSN Pelkilat</h6>
+                            <P>2021</P>
+                            <P class="subtitle">A one-week free class by Mandiri KSN. The class was held to give insights for students who want to take part in the National Olympiad. I give an introduction to problem solving paradigm.</P>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Organization 🧑‍🤝‍🧑</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Phyxius English Debate Competition</h6>
+                            <P>2021</P>
+                            <P class="subtitle">English debate competition held by SMAK 1 BPK Penabur Bandung.</P>
+                            <hr>
+                            <h6 class="title text-danger">OSIS Ekklesia</h6>
+                            <P>2019-2021</P>
+                            <P class="subtitle">Student council in SMAK 1 BPK Penabur Bandung.</P>
+                            <hr>
+                            <h6 class="title text-danger">OSIS Victory</h6>
+                            <P>2016-2018</P>
+                            <P class="subtitle">Student council in SMPK Kalam Kudus Bandung.</P>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Misc 👩‍💻</h4>
+                                <span class="line"></span>                              
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">TC Frame</h6>
+                            <P>2022</P>
+                            <P class="subtitle">I generated test cases for a competitive programming problem in Kokocoder Logicode Competition 2022. I used tcframe for doing so.</P>
+                            <hr>
+                            <h6 class="title text-danger">Discord Bot</h6>
+                            <P>2022</P>
+                            <P class="subtitle">Following this tutorial from FreeCodeCamp, I create a discord bot for my personal use.</P>
+                            <hr>
+                            <h6 class="title text-danger">(virtual) Arduino</h6>
+                            <P>2021</P>
+                            <P class="subtitle">In my eleventh grade, there was a team project to make an innovative product with Arduino in Tinkercad. My team create an automatic clothesline. I took charge of the product design and the code. See the project details <a href="https://youtu.be/jrW6czq7lf4">here</a>.</P>
+                            
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <h2 class="mb-5">Latest <span class="text-danger">Blog</span></h2>
+            <div class="row" id="blog-in">
+                
+            </div>
+            <!-- <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a> -->
+        </div>
+    </section>
+
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <span class="text-danger">Ester</span> 
+            </p>
+        </div>
+    </footer>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- JohnDoe js -->
+    <script src="assets/js/johndoe.js"></script>
+
+</body>
+</html>

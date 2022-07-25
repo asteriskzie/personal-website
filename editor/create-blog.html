@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Create Blog</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="../assets/css/johndoe.css">
+    <!-- Biar bisa pake Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Script -->
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <div class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-form-card">
+                <h4 class="contact-title">Create Blog</h4>
+                <form onsubmit="createBlog(event)">
+                    <div class="form-group">
+                        <input  class="form-control" type="text" id="blog-title" placeholder="Title" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="blog-content" placeholder="Content" rows="7" required></textarea>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" id="blog-btn" class="form-control btn btn-primary" >Done!</button>
+                    </div>
+                </form>
+                <a href="editor.html">or go back..</a>
+            </div>
+        </div>
+    </div>
+</body>
+
