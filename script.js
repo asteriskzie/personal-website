@@ -243,7 +243,7 @@ function listAllBlog() {
             const details = document.createElement('p');                               
             details.className = "post-details";                             
             const heartIcon = document.createElement('i');
-            heartIcon.className = "ti-heart";               like-icon               
+            heartIcon.className = "ti-heart";             
             heartIcon.setAttribute('onclick','likeBlog("' + id + '")');             
 
             const like = document.createElement('span'); 
